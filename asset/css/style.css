@@ -1,19 +1,13 @@
 main{
     width: 90vw;
-    height: 80vh;
+    height: 90vh;
     background-color: white;
-}
-img{
-    position: relative;
 }
 .button_circle{
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color: white;
-}
-.bg-blue{
-    background-color: blue;
 }
 .label{
     position: absolute;
@@ -23,4 +17,11 @@ img{
     left: 50%;
     transform: translate(-50%);
     background-color: rgba(0, 0, 0, 0.5);
+}
+/* Utility */
+.p-relative{
+    position: relative;
+}
+.bg-blue{
+    background-color: blue;
 }

@@ -9,13 +9,11 @@ var app = new Vue({
             './asset/img/tree_alone.jpg',
             './asset/img/trees.jpg'
         ],
-
         // Contatore per scorrere le immagini
         counter: 0,
-
-        // Lo utilizzo per fermare auto play
+        //Dato per stop-start autoplay
         interval: null,
-
+        // Dato per cambiare On-Off
         onOff: 'On'
     },
     // created(){
@@ -55,14 +53,15 @@ var app = new Vue({
             } else {
                 this.counter++;
             }
-            console.log(this.counter)
         },
+        //Funzione per start-stop button autoplay
         generaAutoPlay: function(){
-            
+            // Se interval non è null faccio partire l'autoplay
             if(!this.interval){
                this.interval = setInterval(this.autoPlay, 3000)
                this.onOff = 'Off'
             }else{
+                // Stoppo l'autoplay e riporto interval a null
                 clearInterval(this.interval);
                 this.onOff = 'On'
                 this.interval = null;
@@ -72,5 +71,3 @@ var app = new Vue({
 
     }
 })
-
-// console.log(setInterval(3, 1000))
