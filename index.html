@@ -32,12 +32,13 @@
 
                     <!-- Tasto di sinistra -->
                     <div class="offset-1 col-1 d-flex align-items-center justify-content-end">
-                        <i class="fa-solid fa-chevron-left fs-1" role="button"></i>
+                        <i class="fa-solid fa-chevron-left fs-1" role="button" @click = "scrollLeft()"></i>
                     </div>
 
                     <!-- Immagine centrale -->
                     <div class="col-8">
-                        <img class="img-fluid" src="./asset/img/desert.jpg" alt="">
+                        <img class="img-fluid" :src="arrayImg[counter]" alt="immagine">
+                        <!-- Label per cambiare le immagini -->
                         <div class="d-flex label">
                             <div class="button_circle mx-4"></div>
                             <div class="button_circle me-4"></div>
@@ -48,7 +49,7 @@
 
                     <!-- Tasto di destra -->
                     <div class="col-1 d-flex align-items-center">
-                        <i class="fa-solid fa-chevron-right fs-1" role="button"></i>
+                        <i class="fa-solid fa-chevron-right fs-1" role="button" @click = "scrollRight()"></i>
                     </div>
 
                 </div>
