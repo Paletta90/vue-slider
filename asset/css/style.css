@@ -10,9 +10,10 @@ img{
     width: 15px;
     height: 15px;
     border-radius: 50%;
-}
-.bg-white{
     background-color: white;
+}
+.bg-blue{
+    background-color: blue;
 }
 .label{
     position: absolute;

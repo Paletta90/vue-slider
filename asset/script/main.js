@@ -37,7 +37,8 @@ var app = new Vue(
                 }
             },
             // Funzione per cliccare i pallini e cambiare immagine
-            clickCircle: function(elem, i){
+            clickCircle: function(i){
+                this.counter = i;
             }
         }
     }
