@@ -11,7 +11,12 @@ var app = new Vue({
         ],
 
         // Contatore per scorrere le immagini
-        counter: 0
+        counter: 0,
+
+        // Lo utilizzo per fermare auto play
+        interval: null,
+
+        onOff: 'On'
     },
     // created(){
     //     setInterval(this.autoPlay, 1000)
@@ -52,9 +57,17 @@ var app = new Vue({
             }
             console.log(this.counter)
         },
-
         generaAutoPlay: function(){
-            setInterval(this.autoPlay, 3000)
+            
+            if(!this.interval){
+               this.interval = setInterval(this.autoPlay, 3000)
+               this.onOff = 'Off'
+            }else{
+                clearInterval(this.interval);
+                this.onOff = 'On'
+                this.interval = null;
+            }
+            
         }
 
     }
