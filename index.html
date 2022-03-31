@@ -40,10 +40,7 @@
                         <img class="img-fluid" :src="arrayImg[counter]" alt="immagine">
                         <!-- Label per cambiare le immagini -->
                         <div class="d-flex label">
-                            <div class="button_circle mx-4"></div>
-                            <div class="button_circle me-4"></div>
-                            <div class="button_circle me-4"></div>
-                            <div class="button_circle me-4"></div>
+                            <div class="button_circle mx-4" :class = "bg_circle" @click = "clickCircle()" v-for="elem in arrayImg.length"></div>
                         </div>
                     </div>
 
