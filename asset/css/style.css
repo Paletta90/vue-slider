@@ -1,0 +1,26 @@
+body{
+    /* background-color: red; */
+}
+main{
+    width: 90vw;
+    height: 90vh;
+    background-color: white;
+}
+img{
+    position: relative;
+}
+.button_circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+}
+.label{
+    position: absolute;
+    padding: 10px 10px;
+    border-radius: 50px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+}
