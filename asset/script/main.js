@@ -37,12 +37,7 @@ var app = new Vue(
                 }
             },
             // Funzione per cliccare i pallini e cambiare immagine
-            clickCircle: function(){
-                if(this.bg_circle == 'bg-white'){
-                    this.bg_circle = 'bg-primary'
-                }else{
-                    this.bg_circle = 'bg-white'
-                }
+            clickCircle: function(elem, i){
             }
         }
     }
