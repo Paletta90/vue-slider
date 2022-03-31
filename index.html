@@ -26,13 +26,17 @@
 
         <main>
 
+            <div class="text-center mb-4">
+                <button type="button" class="btn btn-danger" @click="generaAutoPlay()">Auto play</button>
+            </div>
+
             <div class="container">
 
                 <div class="row">
 
                     <!-- Tasto di sinistra -->
                     <div class="offset-1 col-1 d-flex align-items-center justify-content-end">
-                        <i class="fa-solid fa-chevron-left fs-1" role="button" @click = "scrollLeft()"></i>
+                        <i class="fa-solid fa-chevron-left fs-1" role="button" @click="scrollLeft()"></i>
                     </div>
 
                     <!-- Immagine centrale -->
@@ -40,13 +44,15 @@
                         <img class="img-fluid" :src="arrayImg[counter]" alt="immagine">
                         <!-- Label per cambiare le immagini -->
                         <div class="d-flex label">
-                            <div class="button_circle mx-4" :class = "(counter == i) ? 'bg-blue' : '' " @click = "clickCircle(i)" v-for="(elem, i) in arrayImg"></div>
+                            <!-- If ternario: quando clicco sul pallino do background blue -->
+                            <div class="button_circle mx-4" :class="(counter == i) ? 'bg-blue' : '' "
+                                @click="clickCircle(i)" v-for="(elem, i) in arrayImg" role="button"></div>
                         </div>
                     </div>
 
                     <!-- Tasto di destra -->
                     <div class="col-1 d-flex align-items-center">
-                        <i class="fa-solid fa-chevron-right fs-1" role="button" @click = "scrollRight()"></i>
+                        <i class="fa-solid fa-chevron-right fs-1" role="button" @click="scrollRight()"></i>
                     </div>
 
                 </div>
