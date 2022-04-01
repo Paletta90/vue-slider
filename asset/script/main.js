@@ -17,8 +17,8 @@ var app = new Vue({
         onOff: 'On'
     },
     // La funzione autoplay parte al caricamento della pagina
-    created(){
-        this.generaAutoPlay()
+    created() {
+        this.autoPlay()
     },
     methods: {
 
@@ -26,9 +26,9 @@ var app = new Vue({
         scrollLeft: function () {
             // Se uguale a zero riparto dall'ultima foto
             if (this.counter == 0) {
-                return this.counter = this.arrayImg.length - 1;
+                this.counter = this.arrayImg.length - 1;
             } else {
-                return this.counter--
+                this.counter--
             }
         },
 
@@ -47,27 +47,19 @@ var app = new Vue({
             this.counter = i;
         },
 
-        //Funzione auto play
-        autoPlay: function () {
-            if (this.counter == 3) {
-                this.counter = 0;
-            } else {
-                this.counter++;
-            }
-        },
         //Funzione per start-stop button autoplay
-        generaAutoPlay: function(){
+        autoPlay: function () {
             // Se interval non è null faccio partire l'autoplay
-            if(!this.interval){
-               this.interval = setInterval(this.autoPlay, 3000)
-               this.onOff = 'Off'
-            }else{
+            if (!this.interval) {
+                this.interval = setInterval(this.scrollRight, 3000)
+                this.onOff = 'Off'
+            } else {
                 // Stoppo l'autoplay e riporto interval a null
                 clearInterval(this.interval);
                 this.onOff = 'On'
                 this.interval = null;
             }
-            
+
         }
 
     }

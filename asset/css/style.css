@@ -21,6 +21,6 @@ main{
 .p-relative{
     position: relative;
 }
-.bg-blue{
+.button_circle.bg-blue{
     background-color: blue;
 }
