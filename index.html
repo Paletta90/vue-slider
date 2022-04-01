@@ -41,6 +41,7 @@
 
                     <!-- Immagine centrale -->
                     <div class="col-8 p-relative">
+
                         <img class="w-100" :src="arrayImg[counter]" alt="immagine">
                         <!-- Label per cambiare le immagini -->
                         <div class="d-flex label">
@@ -48,6 +49,7 @@
                             <div class="button_circle mx-4" :class="(counter == i) ? 'bg-blue' : '' "
                                 @click="clickCircle(i)" v-for="(elem, i) in arrayImg" role="button"></div>
                         </div>
+
                     </div>
 
                     <!-- Tasto di destra -->

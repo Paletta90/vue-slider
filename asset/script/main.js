@@ -16,9 +16,10 @@ var app = new Vue({
         // Dato per cambiare On-Off
         onOff: 'On'
     },
-    // created(){
-    //     setInterval(this.autoPlay, 1000)
-    // },
+    // La funzione autoplay parte al caricamento della pagina
+    created(){
+        this.generaAutoPlay()
+    },
     methods: {
 
         // Funzione per scrollare le foto verso sinistra
